@@ -7,17 +7,24 @@ const routes = (handler) => [
       cors: {
         origin: ['*'],
       },
+      auth: 'notesapp_jwt',
     },
   },
   {
     method: 'GET',
     path: '/notes',
     handler: handler.getNotesHandler,
+    options: {
+      auth: 'notesapp_jwt',
+    },
   },
   {
     method: 'GET',
     path: '/notes/{id}',
     handler: handler.getNoteByIdHandler,
+    options: {
+      auth: 'notesapp_jwt',
+    },
   },
   {
     method: 'PUT',
@@ -27,6 +34,7 @@ const routes = (handler) => [
       cors: {
         origin: ['*'],
       },
+      auth: 'notesapp_jwt',
     },
   },
   {
@@ -37,6 +45,7 @@ const routes = (handler) => [
       cors: {
         origin: ['*'],
       },
+      auth: 'notesapp_jwt',
     },
   },
 ];
