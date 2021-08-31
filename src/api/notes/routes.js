@@ -4,9 +4,6 @@ const routes = (handler) => [
     path: '/notes',
     handler: handler.postNoteHandler,
     options: {
-      cors: {
-        origin: ['*'],
-      },
       auth: 'notesapp_jwt',
     },
   },
@@ -31,9 +28,6 @@ const routes = (handler) => [
     path: '/notes/{id}',
     handler: handler.putNoteByIdHandler,
     options: {
-      cors: {
-        origin: ['*'],
-      },
       auth: 'notesapp_jwt',
     },
   },
@@ -42,9 +36,6 @@ const routes = (handler) => [
     path: '/notes/{id}',
     handler: handler.deleteNoteByIdHandler,
     options: {
-      cors: {
-        origin: ['*'],
-      },
       auth: 'notesapp_jwt',
     },
   },
